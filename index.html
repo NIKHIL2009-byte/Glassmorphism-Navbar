@@ -32,13 +32,21 @@ background: rgba(100, 6, 223, 0.541); /* Semi-transparent background */
       border-radius: 50px;                    /* Dynamic island pill shape */
       box-shadow: 0 8px 42px 20px rgba(10, 54, 177, 0.3);
  }
+
+ 
 .logo{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2.5rem;
   gap:2px;
   color:rgb(233, 201, 19);
-  text-shadow:0 8px 30px 12px rgb(194, 131, 253);
+  text-shadow:0 0 15px rgb(194, 131, 253);
   text-align: left;
+  cursor: pointer;
+}
+.logo:hover{
+  color:rgb(241, 208, 19);
+  text-shadow: 0 0 10px yellowgreen;
+  transition: 0.6s;
 }
 .nav-links{
   list-style: none;
@@ -58,6 +66,53 @@ gap:30px;
   text-shadow: 0 0 10px rgb(87, 200, 252);
   transition: 0.5s;
 }
+.hero{
+  height:75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding:0 20px;
+}
+.hero-card{
+  background-color:rgba(100, 6, 223, 0.541);
+ backdrop-filter: blur(16px);
+ -webkit-backdrop-filter: blur(16px);
+ border:1px solid rgba(100, 6, 223, 0.541);
+ border-radius: 24px;
+ padding:40px 30px;
+ width:640px;
+ box-shadow: 0 8 32px 0 rgb(0,0,0,0.3);
+}
+.hero h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.hero h1 span {
+  color: rgb(233, 201, 19); 
+  text-shadow: 0 0 15px rgba(233, 201, 19, 0.5);
+}
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  background: rgb(233, 201, 19);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(233, 201, 19, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(233, 201, 19, 0.7);
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,14 +120,19 @@ gap:30px;
 </head>
 <body>
   <nav>
- 
-    <div class="logo">LOTIS</div>
+    <div class="logo">BE MINE</div>
   <ul class="nav-links">
   <li><a href="#">HOME</a></li>
   <li><a href="#">SERVICES</a></li>
   <li><a href="#">ABOUT US</a></li>
   </ul>
-
   </nav>
+  <main class="hero">
+<div class="hero-card">
+  <h1>WELCOME TO <span>BE MINE</span></h1>
+  <p>Empowering innovation, technical mastery, and creative leadership for the next generation.</p>
+  <a href="#" class="btn-primary">EXPLORE</a>
+</div>
+  </main>
 </body>
 </html>
